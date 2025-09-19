@@ -1,7 +1,7 @@
 # Nicolas Ferreira Bicudo Duarte - 00000851339
 # Projeto 1 - Programação Orientada a Objetos (Clínica)
 
-● ## Descrição:
+##● Descrição:
 Este projeto foi desenvolvido para a disciplina **Programação Orientada a Objetos**, na universidade **Universidade Católica de Pernambuco - UNICAP**.
 
 ===================================================
