@@ -1,0 +1,103 @@
+classDiagram
+    class Main {
+        +main(String[] args)
+    }
+
+    class ClinicaMenu {
+        +exibir()
+        -cadastrarPaciente()
+        -cadastrarMedico()
+        -cadastrarLocal()
+        -marcarConsulta()
+        -listarTodasConsultas()
+    }
+
+    class ClinicaService {
+        -ClinicaRepository repo
+        +totalMedicos()
+        +consultasPorMedico()
+        +consultasPorPaciente()
+        +exibirMedicoComMaisConsultas()
+        +totalConsultasRealizadas()
+        +totalPacientes()
+    }
+
+    class ClinicaRepository {
+        -List<Consulta> consultas
+        -List<Medico> medicos
+        -List<Paciente> pacientes
+        -List<Local> locais
+        +adicionarConsulta()
+        +adicionarMedico()
+        +adicionarPaciente()
+        +adicionarLocal()
+        +getConsultas()
+        +getMedicos()
+        +getPacientes()
+        +getLocais()
+    }
+
+    class Paciente {
+        -String nome
+        -String cpf
+        +Paciente(nome, cpf)
+        +getNome()
+        +setNome()
+        +getCpf()
+        +setCpf()
+        +toString()
+    }
+
+    class Medico {
+        -String nome
+        -String especialidade
+        +Medico(nome, especialidade)
+        +getNome()
+        +setNome()
+        +getEspecialidade()
+        +setEspecialidade()
+        +toString()
+    }
+
+    class Local {
+        -String nome
+        -String endereco
+        -String sala
+        +Local(nome, endereco, sala)
+        +getNome()
+        +setNome()
+        +getEndereco()
+        +setEndereco()
+        +getSala()
+        +setSala()
+        +toString()
+    }
+
+    class Consulta {
+        -Paciente paciente
+        -Medico medico
+        -Local local
+        -LocalDateTime dataHora
+        -boolean realizado
+        +Consulta(paciente, medico, local, dataHora)
+        +getPaciente()
+        +getMedico()
+        +getLocal()
+        +getDataHora()
+        +isRealizado()
+        +marcarComoRealizado()
+        +toString()
+    }
+
+    %% Relações entre classes
+    Main --> ClinicaMenu : usa
+    ClinicaMenu --> ClinicaService : usa
+    ClinicaMenu --> ClinicaRepository : usa
+    ClinicaService --> ClinicaRepository : depende
+    ClinicaRepository --> Consulta : contém
+    ClinicaRepository --> Medico : contém
+    ClinicaRepository --> Paciente : contém
+    ClinicaRepository --> Local : contém
+    Consulta --> Paciente : associação
+    Consulta --> Medico : associação
+    Consulta --> Local : associação
