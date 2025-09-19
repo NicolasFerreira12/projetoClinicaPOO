@@ -1,21 +1,21 @@
 # Nicolas Ferreira Bicudo Duarte - 00000851339
 # Projeto 1 - Programação Orientada a Objetos (Clínica)
 
-##● Descrição:
+**● Descrição:**
 Este projeto foi desenvolvido para a disciplina **Programação Orientada a Objetos**, na universidade **Universidade Católica de Pernambuco - UNICAP**.
 
 ===================================================
 
 O sistema simula o gerenciamento de uma **Clínica**, permitindo:
 
-● ##Funcionalidades:
+**● Funcionalidades:**
 
 - Cadastro de pacientes, médicos e locais
 - Agendamento de consultas
 - Listagem de todas as consultas
 - Relatórios estratégicos para tomada de decisão
   
-● ##Relatórios Disponíveis:
+**● Relatórios Disponíveis:**
 
 - Total de médicos cadastrados
 - Consultas por médico
@@ -32,7 +32,7 @@ A arquitetura segue o padrão em camadas:
 
 ===================================================
 
-● ##Exemplos de Uso:
+**● Exemplos de Uso:**
 
 1. Cadastre pelo menos 1 médico, 1 paciente e 1 local;
 
@@ -43,6 +43,6 @@ A arquitetura segue o padrão em camadas:
 
 ===================================================
 
-● ##Para executar:
+**● Para executar:**
   
 - git clone https://github.com/seu-usuario/projeto-clinica.git
